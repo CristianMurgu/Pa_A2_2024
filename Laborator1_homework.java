@@ -20,11 +20,11 @@ public class Laborator1 {
             varK= varK+(var%10)*(var%10);
             var=var/10;
         }
-        if(varK!=k && varK<varAux)
+        if(varK!=k && varK>9)
             return prob1(varK, k);
-        else if(varK>varAux || ((varK==1 || varK==0) && varK>k))
-            return false;
-        return true;
+        else if(varK==k)
+            return true;
+        return false;
     }
     
     public static int prob2(int a, int b, int k)
